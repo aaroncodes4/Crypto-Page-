@@ -1,38 +1,351 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background-color: #fafafa;
+  color: #fafafa;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.1rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h1 {
+  font-weight: 600;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+h3 {
+  font-weight: 500;
+}
+
+a {
+  color: #fafafa;
+}
+
+.app {
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+.navbar {
+  background-color: #121d33;
+  height: 75px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  box-shadow: 2px 1px 1px rgba(255, 255, 255, 1);
+  /* overflow: hidden; */
+  z-index: 1;
+}
+
+.container {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+.container1 {
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+.flex {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.logo span {
+  color: rgb(202, 8, 8);
+}
+
+.fa-icons {
+  font-size: 2.5rem;
+}
+
+/* coin colors */
+
+.bod1 {
+    color: #F7931A;
+}
+.bod2 {
+    color: #627EEA;
+}
+.bod3 {
+    color: #5F4BDD;
+}
+
+.btc {
+    color: #F7931A;
+}
+.ether {
+    color: #627EEA;
+}
+
+ul {
+  display: flex;
+  align-items: center;
+}
+
+li {
+  margin-left: 1rem;
+  font-weight: 500;
+  padding: 0.44rem;
+  transition: all 0.2s ease-in-out;
+}
+
+li:hover {
+  border-bottom: 2px solid #fafafa;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+button {
+  padding: 0.8rem 1rem;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.log-btn {
+  background-color: inherit;
+  border: 2px solid #fafafa;
+  color: #fff;
+}
+
+.search {
+  width: 2.3rem;
+  height: 2.3rem;
+  border-radius: 50%;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-color: #e6e6e6;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.fa-search {
+  color: #121d33;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.demo {
+  background-image: linear-gradient(
+    to right,
+    #121d33,
+    #32256c,
+    #8b40d0
+  );
+  padding-top: 10rem;
+  text-align: left;
+  height: 40rem;
+}
+
+.demo h1 {
+  font-size: 3.2rem;
+  font-weight: 600;
+  color: #fff;
+  padding: 1rem 0;
+}
+
+.demo h2 {
+    font-weight: 500;
+    font-size: 1.5rem;
+    padding: 1rem 0;
+}
+
+.demo-sign {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem 0;
+}
+
+.demo-sign input {
+    width: 40%;
+    height: 3rem;
+    padding: 0.2rem 1rem;
+    background-color: #4551A3;
+    outline: none;
+    color: #fff;
+    border: none;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 0.3rem;
+}
+
+input::placeholder {
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 500;
+}
+.demo-btn {
+    color: #4551A3;
+}
+
+.coin-show {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin-top: 5rem;
+    color: #121d33;
+    margin-bottom: 2rem;
+}
+
+.coin-info {
+    background-color: #fff;
+    border-radius: 1rem;
+    padding: 1rem;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
+}
+
+.coin-top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+
+.coin-nav {
+    display: flex;
+    gap: 1rem;
+}
+
+.coin-btn-buy {
+    background-color: #e7e7e7;
+}
+
+.coin-btn-sell {
+    background-color: #e7e7e7;
+    color: #2eb6a4;
+}
+
+.coin-bottom {
+    display: grid;
+}
+
+.coin-name {
+    display: flex;
+    align-items: center;
+    margin: 0.5rem 0;
+    gap: 1rem;
+}
+
+.coin-name h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.coin-name p {
+    color: #424242;
+    font-weight: 600;
+}
+
+.coin-price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.coin-price h3{
+    font-weight: 500;
+}
+
+.coin-price p {
+    color: #2eb6a4;
+    font-weight: 600;
+}
+
+.more-link {
+    display: flex;
+    justify-content: flex-end;
+    color: #121d33;
+    align-items: center;
+    gap: 0.2rem;
+    cursor: pointer;
+}
+.more-link a {
+    color: #121d33;
+}
+
+.more-link:hover,
+a:hover {
+    color: #8b40d0;
+}
+/* pop search */
+.search-bar {
+    position: absolute;
+    top: -10rem;
+    right: 17rem;
+    background-color: #fafafa;
+    padding: 1rem;
+    display: grid;
+    gap: 1rem;
+    width: 25rem;
+    border-radius: 0.66rem;
+    box-shadow: 3px 2px 2px rgba(0, 0, 0, 0.2);
+    margin-top: 12rem;
+    color: #121d33;
+}
+
+.search-bar-top {
+    display: flex;
+    align-items: center;
+    position: relative;
+    border: 2px solid #121d33;
+    padding: 0 0.5rem;
+    border-radius: 0.5rem;
+}
+
+
+.block {
+    display: grid;
+    gap: 0.6rem;
+}
+
+.block p {
+    display: flex;
+    gap: 0.2rem;
+    align-items: center;
+    padding: 0.5rem 0;
+    margin-left: 1rem;
+    cursor: pointer;
+}
+
+.search-btn {
+    display: flex;
+    justify-content: space-between;
+}
+.search-btn1 {
+    padding: 0.4rem 0.8rem;
+    transition: 0.2s ease;
+}
+
+.search-btn1:hover {
+    background-color: #d5d5d5;
+}
+
+.search-bar input {
+    width: 100%;
+    height: 2.55rem;
+    border: none;
+    padding: 0 1rem;
+    font-size: 1rem;
+    outline: none;
 }
